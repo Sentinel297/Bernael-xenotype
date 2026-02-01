@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Bernael Xenotype</name>
+	<author>Sovereign,Elseud,Mortis</author>
+	<packageId>Mortis.BX</packageId>
+	<description>Bernael Xenotype</description>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+			<steamWorkshopUrl>https://store.steampowered.com/app/1826140/RimWorld__Biotech/</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>EBSG.Framework</packageId>
+			<displayName>EBSG Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3112549163</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>EBSG.Framework</li>
+	</loadAfter>
+</ModMetaData>

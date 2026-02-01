@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseWeaponNeolithic"> 
+	<defName>BX_SoulLantern</defName>
+        <label>soul lantern</label>
+        <description>An ancient artifact powered by the energy of souls. This lamp serves not only as a source of eerie light, but also as a focusing device for psionics. She is able to shoot clumps of pure neural energy that ignore physical obstacles, and in close combat, her heavy body made of plasteel and eltex becomes a formidable weapon.</description>
+        <graphicData>
+            <texPath>Things/Weapons/Lantern/Lantern</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+        <soundInteract>Interact_BeatFire</soundInteract>
+		 <techLevel>Spacer</techLevel>
+        <statBases>
+            <WorkToMake>25000</WorkToMake>
+            <Mass>3.5</Mass>
+            <AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+		 </statBases>
+
+        <equippedStatOffsets>
+            <PsychicSensitivityOffset>0.25</PsychicSensitivityOffset>
+            <PsychicEntropyRecoveryRate>0.04</PsychicEntropyRecoveryRate>
+        </equippedStatOffsets>
+
+        <costList>
+            <Plasteel>30</Plasteel>
+            <VPE_Eltex MayRequire="VanillaPsycastsExpanded">4</VPE_Eltex>
+            <ComponentSpacer>1</ComponentSpacer>
+            <Gold>50</Gold>
+        </costList>
+        <recipeMaker>
+		<researchPrerequisites>
+				<li MayRequire="VanillaPsycastsExpanded">VPE_CasterGear</li>
+				<li>Fabrication</li>
+			</researchPrerequisites>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+		<thingSetMakerTags>
+		<li>RewardStandardQualitySuper</li>
+		<li>RewardSpecial</li>	
+		</thingSetMakerTags>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>BX_SoulProj</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>25.9</range>
+                <soundCast>BX_Lantern_Cast</soundCast> <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power> <cooldownTime>1.8</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+        </tools>
+        
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowColor>(100, 200, 255, 0)</glowColor>
+                <glowRadius>3</glowRadius>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseProjectileNeolithic">
+        <defName>BX_SoulProj</defName>
+        <label>soul bolt</label>
+        <graphicData>
+            <texPath>Things/Projectile/Soul_Proj</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Burn</damageDef> 
+			<damageAmountBase>18</damageAmountBase>
+            <stoppingPower>1.5</stoppingPower> 
+			<armorPenetrationBase>0.50</armorPenetrationBase> 
+			<speed>30</speed> 
+			</projectile>
+    </ThingDef>
+</Defs>
