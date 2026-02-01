@@ -1,0 +1,7 @@
+C:\Users\GAMERWORLD\source\repos\Bernael Xenotype\bin\Debug\Bernael Xenotype.dll
+C:\Users\GAMERWORLD\source\repos\Bernael Xenotype\bin\Debug\Bernael Xenotype.pdb
+C:\Users\GAMERWORLD\source\repos\Bernael Xenotype\obj\Debug\Bernael Xenotype.csproj.AssemblyReference.cache
+C:\Users\GAMERWORLD\source\repos\Bernael Xenotype\obj\Debug\Bernael Xenotype.csproj.CoreCompileInputs.cache
+C:\Users\GAMERWORLD\source\repos\Bernael Xenotype\obj\Debug\Bernael Xenotype.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Bernael Xenotype\Assemblies\Bernael Xenotype.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Bernael Xenotype\1.6\Assemblies\Bernael Xenotype.dll
