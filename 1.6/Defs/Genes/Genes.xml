@@ -320,9 +320,6 @@
 	<biostatMet>0</biostatMet>
 	<displayOrderInCategory>438</displayOrderInCategory>
 	<iconPath>UI/Icons/Genes/Bernael_Gene_Nihilism</iconPath>
-	<statFactors>
-		<CertaintyLossFactor MayRequire="Ludeon.Rimworld.Ideology">0.5</CertaintyLossFactor>
-	</statFactors>
 </GeneDef>
 
 </Defs>
