@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<XenotypeDef>
+	<defName>BX_Bernael</defName>
+	<label>Bernael</label>
+	<description>Bernael</description>
+	<descriptionShort>Bernael</descriptionShort>
+	<iconPath>UI/XenoIconBernael</iconPath>
+	<inheritable>true</inheritable>
+	<genes>
+		<li>BX_Grace_Galling</li>
+		<li>BX_Nihilism</li>
+		<li>BX_GracePendulum</li>
+		<li>BX_Hexmaster</li>
+		<li>BX_NourishingDarkness</li>
+		<li>BX_DepravedHead</li>
+		<li>BX_CravedBody</li>
+		<li>BX_Profane_Halo</li>
+		<li>BX_CurvedWings</li>
+		<li>BX_WitheredSoul</li>
+		<li>MeleeDamage_Weak</li>
+		<li>Sterile</li>
+		<li>BX_Skin_Withered</li>
+		<li>Beard_NoBeardOnly</li>
+		<li>Hair_BaldOnly</li>
+		<li>PsychicAbility_Extreme</li>
+		<li>Aggression_DeadCalm</li>
+		<li>Neversleep</li>
+		<li>UVSensitivity_Mild</li>
+		<li>AptitudeRemarkable_Intellectual</li>
+		<li>AptitudeStrong_Shooting</li>
+		<li>AptitudeStrong_Medicine</li>
+		<li>AptitudeTerrible_Melee</li>
+		<li>AptitudeTerrible_Social</li>
+		<li>AptitudePoor_Mining</li>
+	</genes>
+</XenotypeDef>
+
+<XenotypeIconDef>
+	<defName>XenoIconBernael</defName>
+	<texPath>UI/XenoIconBernael</texPath>
+</XenotypeIconDef>
+  
+  </Defs>

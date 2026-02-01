@@ -245,5 +245,70 @@
             </li>
         </comps>
     </HediffDef>
+	
+<GeneDef>
+	<defName>BX_NourishingDarkness</defName>
+	<label>Nourishing Darkness</label>
+	<description>Reduced hunger rate by 50% when the pawn is in the dark. Hunger rate increased by 200% when standing in light.</description>
+	<geneClass>Bernael_Xenotype.Gene_Hediff</geneClass>
+	<biostatCpx>1</biostatCpx>
+	<biostatMet>0</biostatMet>
+	<displayOrderInCategory>438</displayOrderInCategory>
+	<iconPath>UI/Icons/Genes/Gene_Darkeater</iconPath>
+	<modExtensions>
+		<li Class="Bernael_Xenotype.Gene_AddHediff">
+			<hediffsToAdd>
+				<li>BX_Gene_NourishingDarkness_Hediff</li>
+			</hediffsToAdd>
+		</li>
+	</modExtensions>
+</GeneDef>
+
+<GeneDef>
+	<defName>BX_Hexmaster</defName>
+	<label>Hexmaster</label>
+	<description>The carrier of this gene has possessed Psylink since its appearance and has a second level in the branch of dark magic.</description>
+	<geneClass>Bernael_Xenotype.Gene_Hexmaster</geneClass>
+	<biostatCpx>1</biostatCpx>
+	<biostatMet>0</biostatMet>
+	<displayOrderInCategory>438</displayOrderInCategory>
+	<iconPath>UI/Icons/Genes/Gene_Darkeater</iconPath>
+</GeneDef>
+
+<GeneDef>
+	<defName>BX_Nihilism</defName>
+	<label>Nihilism</label>
+	<description>Carriers of this gene are much less likely to be recruited and change their ideology.</description>
+	<geneClass>Bernael_Xenotype.Gene_Nihilism</geneClass>
+	<biostatCpx>1</biostatCpx>
+	<biostatMet>0</biostatMet>
+	<displayOrderInCategory>438</displayOrderInCategory>
+	<iconPath>UI/Icons/Genes/Bernael_Gene_Nihilism</iconPath>
+	<statFactors>
+		<CertaintyLossFactor MayRequire="Ludeon.Rimworld.Ideology">0.5</CertaintyLossFactor>
+	</statFactors>
+</GeneDef>
+
+<GeneDef>
+	<defName>BX_Grace_Galling</defName>
+	<label>Grace Galling</label>
+	<description>Carriers of this gene hate people who have used Grace.</description>
+	<geneClass>Gene</geneClass>
+	<biostatCpx>1</biostatCpx>
+	<biostatMet>0</biostatMet>
+	<displayOrderInCategory>438</displayOrderInCategory>
+	<iconPath>UI/Icons/Genes/Bernael_Gene_Nihilism</iconPath>
+</GeneDef>
+
+<GeneDef>
+	<defName>BX_GracePendulum</defName>
+	<label>Pendulum of Grace</label>
+	<description>Carriers of this gene that transforms an angel into a fallen one (and vice versa) when they are deprived of Grace and suffering from a mental break.</description>
+	<geneClass>Bernael_Xenotype.Gene_Pendulum</geneClass>
+	<biostatCpx>1</biostatCpx>
+	<biostatMet>0</biostatMet>
+	<displayOrderInCategory>438</displayOrderInCategory>
+	<iconPath>UI/Icons/Genes/Bernael_Gene_Nihilism</iconPath>
+</GeneDef>
 
 </Defs>
