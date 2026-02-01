@@ -311,4 +311,18 @@
 	<iconPath>UI/Icons/Genes/Bernael_Gene_Nihilism</iconPath>
 </GeneDef>
 
+<GeneDef>
+	<defName>BX_DarkSpeech</defName>
+	<label>Dark Speech</label>
+	<description>Carriers of this gene speak in a dark, ancient language. Creatures without this gene will feel uneasy when interacted with.</description>
+	<geneClass>Gene</geneClass>
+	<biostatCpx>1</biostatCpx>
+	<biostatMet>0</biostatMet>
+	<displayOrderInCategory>438</displayOrderInCategory>
+	<iconPath>UI/Icons/Genes/Bernael_Gene_Nihilism</iconPath>
+	<statFactors>
+		<CertaintyLossFactor MayRequire="Ludeon.Rimworld.Ideology">0.5</CertaintyLossFactor>
+	</statFactors>
+</GeneDef>
+
 </Defs>
