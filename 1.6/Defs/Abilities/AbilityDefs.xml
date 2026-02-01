@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <AbilityCategoryDef>
+		<defName>Bernael</defName>
+		<displayOrder>1000</displayOrder>
+	</AbilityCategoryDef>
+
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>BX_SoulFeeding</defName>
+		<label>soulfeed</label>
+		<description>Touch the target and extract their life essence directly from their skin. The target will lose ??? and will be horrified by the interaction, but will be otherwise unharmed.\n\nCan only target non-soulstarved humans. Soul gain is affected by the target's body size.</description>
+		<iconPath>UI/Icons/Genes/Gene_SoulStarved</iconPath>
+		<category>Bernael</category>
+		<displayOrder>100</displayOrder>
+		<warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+		<warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBloodfeeders>false</canTargetBloodfeeders>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Bernael_Xenotype.CompProperties_AbilitySoulDrain">
+				<soulGain>0.2</soulGain>
+				<thoughtDefToGiveTarget>FedOn</thoughtDefToGiveTarget>
+				<opinionThoughtDefToGiveTarget>FedOn_Social</opinionThoughtDefToGiveTarget>
+				<resistanceGain>1</resistanceGain>
+			</li>
+			<li Class="CompProperties_AbilityRequiresCapacity">
+				<capacity>Manipulation</capacity>
+			</li>
+		</comps>
+	</AbilityDef>
+
+</Defs>

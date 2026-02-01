@@ -35,6 +35,11 @@
 		<li>AptitudeTerrible_Melee</li>
 		<li>AptitudeTerrible_Social</li>
 		<li>AptitudePoor_Mining</li>
+		<!-- Soul Energy -->
+		<li>BX_SoulStarved</li>
+		<!-- Abilities -->
+		<li>BX_SoulFeeder</li>
+
 	</genes>
 </XenotypeDef>
 

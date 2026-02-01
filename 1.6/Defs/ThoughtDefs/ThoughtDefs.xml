@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>BX_AbsorbedCorruptedSoulGem</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>5</durationDays>
+        <stackLimit>5</stackLimit>
+
+        <stages>
+            <li>
+                <label>absorbed soul</label>
+                <description>I absorbed a soul. It felt exhilarating and rejuvenated my soul.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BX_SoulEnergyCraving</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>BX_SoulCraving</hediff>
+        <stages>
+            <li>
+                <label>soul energy craving</label>
+                <description>I feel an intense yearning for soul essence.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>soul energy craving</label>
+                <description>I find myself irresistibly drawn to the life force of others, my desperation driving me to increasingly risky behavior in pursuit of satisfaction.</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+            <li>
+                <label>soul energy craving</label>
+                <description>I'm consumed by an insatiable hunger, my essence withering in its absence.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

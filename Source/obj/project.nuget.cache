@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2QIoQjG9maY=",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael-xenotype\\Source\\Bernael Xenotype.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Enurta\\.nuget\\packages\\krafs.publicizer\\2.3.0\\krafs.publicizer.2.3.0.nupkg.sha512",
+    "C:\\Users\\Enurta\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4566\\krafs.rimworld.ref.1.6.4566.nupkg.sha512",
+    "C:\\Users\\Enurta\\.nuget\\packages\\lib.harmony\\2.4.2\\lib.harmony.2.4.2.nupkg.sha512"
+  ],
+  "logs": []
+}
