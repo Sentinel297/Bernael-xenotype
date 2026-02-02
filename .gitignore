@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+*.suo
+*.user
+*.cache
+*.userprefs
+.idea/
+*.tmp
+*.log
+*.AssemblyReference.cache
+*.vsidx
+*.dtbcache.json
+Source/obj/Debug/PublicizedAssemblies/
