@@ -1,41 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\",
+  "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\bernaelhelper\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\bernael xenotype\\source\\bernaelhelper\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:bernaelhelper\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\genes\\gene_hexmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\genes\\gene_hexmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:genes\\gene_hexmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\genes\\gene_pendulum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\genes\\gene_pendulum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:genes\\gene_pendulum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\hediffs\\hediff_bernaeltonephilim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\hediffs\\hediff_bernaeltonephilim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:hediffs\\hediff_bernaeltonephilim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\bernaelhelper\\bernaelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\bernaelhelper\\bernaelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:bernaelhelper\\bernaelhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\genes\\gene_nihilism.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\genes\\gene_nihilism.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:genes\\gene_nihilism.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\genes\\gene_nourishingdarkness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\genes\\gene_nourishingdarkness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:genes\\gene_nourishingdarkness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|c:\\users\\gamerworld\\source\\repos\\bernael xenotype\\hediffs\\hediff_nourishingdarkness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\hediffs\\hediff_nourishingdarkness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D99D612E-745F-4381-AB4F-A91F4DA8A3E2}|Bernael Xenotype.csproj|solutionrelative:hediffs\\hediff_nourishingdarkness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -52,39 +52,37 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DefOf.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\DefOf.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\DefOf.cs",
               "RelativeDocumentMoniker": "DefOf.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\DefOf.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\DefOf.cs",
               "RelativeToolTip": "DefOf.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T08:42:58.112Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "BernaelHelper.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\BernaelHelper\\BernaelHelper.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\BernaelHelper\\BernaelHelper.cs",
               "RelativeDocumentMoniker": "BernaelHelper\\BernaelHelper.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\BernaelHelper\\BernaelHelper.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\BernaelHelper\\BernaelHelper.cs",
               "RelativeToolTip": "BernaelHelper\\BernaelHelper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T10:54:23.3Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Harmony.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\BernaelHelper\\Harmony.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\BernaelHelper\\Harmony.cs",
               "RelativeDocumentMoniker": "BernaelHelper\\Harmony.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\BernaelHelper\\Harmony.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\BernaelHelper\\Harmony.cs",
               "RelativeToolTip": "BernaelHelper\\Harmony.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAD4v0UAAABuAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAnwCkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T12:43:28.544Z",
               "IsPinned": true,
@@ -94,79 +92,73 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Gene_Pendulum.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_Pendulum.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_Pendulum.cs",
               "RelativeDocumentMoniker": "Genes\\Gene_Pendulum.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_Pendulum.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_Pendulum.cs",
               "RelativeToolTip": "Genes\\Gene_Pendulum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T14:08:07.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T14:08:07.512Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Hediff_BernaelToNephilim.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Hediffs\\Hediff_BernaelToNephilim.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Hediffs\\Hediff_BernaelToNephilim.cs",
               "RelativeDocumentMoniker": "Hediffs\\Hediff_BernaelToNephilim.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Hediffs\\Hediff_BernaelToNephilim.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Hediffs\\Hediff_BernaelToNephilim.cs",
               "RelativeToolTip": "Hediffs\\Hediff_BernaelToNephilim.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T13:35:43.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T13:35:43.54Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Gene_Nihilism.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_Nihilism.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_Nihilism.cs",
               "RelativeDocumentMoniker": "Genes\\Gene_Nihilism.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_Nihilism.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_Nihilism.cs",
               "RelativeToolTip": "Genes\\Gene_Nihilism.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T10:12:44.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T10:12:44.064Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Gene_Hexmaster.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_Hexmaster.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_Hexmaster.cs",
               "RelativeDocumentMoniker": "Genes\\Gene_Hexmaster.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_Hexmaster.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_Hexmaster.cs",
               "RelativeToolTip": "Genes\\Gene_Hexmaster.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T09:54:11.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T09:54:11.361Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Hediff_NourishingDarkness.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Hediffs\\Hediff_NourishingDarkness.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Hediffs\\Hediff_NourishingDarkness.cs",
               "RelativeDocumentMoniker": "Hediffs\\Hediff_NourishingDarkness.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Hediffs\\Hediff_NourishingDarkness.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Hediffs\\Hediff_NourishingDarkness.cs",
               "RelativeToolTip": "Hediffs\\Hediff_NourishingDarkness.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T09:16:37.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T09:16:37.313Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Gene_NourishingDarkness.cs",
-              "DocumentMoniker": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_NourishingDarkness.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_NourishingDarkness.cs",
               "RelativeDocumentMoniker": "Genes\\Gene_NourishingDarkness.cs",
-              "ToolTip": "C:\\Users\\GAMERWORLD\\source\\repos\\Bernael Xenotype\\Genes\\Gene_NourishingDarkness.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Bernael Xenotype\\Source\\Genes\\Gene_NourishingDarkness.cs",
               "RelativeToolTip": "Genes\\Gene_NourishingDarkness.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T09:05:57.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T09:05:57.79Z"
             }
           ]
         }
