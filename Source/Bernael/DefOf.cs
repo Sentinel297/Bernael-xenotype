@@ -16,8 +16,6 @@ namespace Bernael_Xenotype
             DefOfHelper.EnsureInitializedInCtor(typeof(BernaelDefOf));
         }
 
-        public static GeneDef BX_Grace_Galling;
-        public static GeneDef BX_GracePendulum;
         public static GeneDef BX_DarkSpeech;
         public static GeneDef BX_DepravedHead;
         public static TaleDef BX_ConsumedGrace;
@@ -35,6 +33,12 @@ namespace Bernael_Xenotype
 
         [MayRequire("Sov.Nephilim")]
         public static GeneDef GS_Grace_New;
+
+        [MayRequire("Sov.Nephilim")]
+        public static GeneDef BX_Grace_Galling;
+        [MayRequire("Sov.Nephilim")]
+        public static GeneDef BX_GracePendulum;
+
         [MayRequire("Sov.Nephilim")]
         public static XenotypeDef GS_Nephilim;
     }

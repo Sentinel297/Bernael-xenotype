@@ -174,20 +174,16 @@
 		<label>Withered Soul</label>
 		<labelShortAdj>withered</labelShortAdj>
 		<description>gene that cause a person to experience pain if they are in an bad mood.</description>
-		<geneClass>EBSGFramework.HediffAdder</geneClass>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>2</biostatMet>
 		<displayOrderInCategory>438</displayOrderInCategory>
 		<iconPath>UI/Icons/Genes/BX_WitheredSoul</iconPath>
+		<geneClass>Bernael_Xenotype.Gene_Hediff</geneClass>
 		<modExtensions>
-			<li Class="EBSGFramework.EBSGExtension">
-				<hediffsToApply>
-					<li>
-						<hediff>BX_WitheredSoulHediff</hediff>
-						<onlyIfNew>true</onlyIfNew>
-					</li>
-				</hediffsToApply>
-				<vanishingGene>false</vanishingGene>
+			<li Class="Bernael_Xenotype.Gene_AddHediff">
+				<hediffsToAdd>
+					<li>BX_Gene_NourishingDarkness_Hediff</li>
+				</hediffsToAdd>
 			</li>
 		</modExtensions>
 	</GeneDef>
