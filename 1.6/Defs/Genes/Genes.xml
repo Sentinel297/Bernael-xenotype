@@ -182,7 +182,7 @@
 		<modExtensions>
 			<li Class="Bernael_Xenotype.Gene_AddHediff">
 				<hediffsToAdd>
-					<li>BX_Gene_NourishingDarkness_Hediff</li>
+					<li>BX_WitheredSoulHediff</li>
 				</hediffsToAdd>
 			</li>
 		</modExtensions>
