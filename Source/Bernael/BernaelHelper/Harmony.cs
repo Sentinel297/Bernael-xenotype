@@ -115,7 +115,7 @@ namespace Bernael_Xenotype
             static Gamecomponent_PsychicSight gameComp => Current.Game.GetGamePsychicSightComp();
             public static void Postfix(HediffSet diffSet, ref float __result)
             {
-                if (__result != 1 && !gameComp.psychicSeers.NullOrEmpty() && gameComp.psychicSeers.Contains(diffSet.pawn))
+                if (__result != 1.25f && !gameComp.psychicSeers.NullOrEmpty() && gameComp.psychicSeers.Contains(diffSet.pawn))
                 {
                     __result = 1.25f;
                     //Log.Error($"{__result}");

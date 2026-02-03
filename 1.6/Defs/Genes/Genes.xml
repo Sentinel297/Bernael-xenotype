@@ -374,7 +374,7 @@
 		<biostatMet>0</biostatMet>
 		<biostatArc>1</biostatArc>
 		<displayCategory>BX_DarkEnergy</displayCategory>
-		<displayOrderInCategory>-1</displayOrderInCategory>
+		<displayOrderInCategory>-3</displayOrderInCategory>
 		<iconPath>UI/Icons/Genes/BX_Mastermind</iconPath>
 		<symbolPack>
 			<prefixSymbols>
@@ -401,7 +401,7 @@
 		<biostatMet>0</biostatMet>
 		<biostatArc>1</biostatArc>
 		<displayCategory>BX_DarkEnergy</displayCategory>
-		<displayOrderInCategory>-2</displayOrderInCategory>
+		<displayOrderInCategory>-4</displayOrderInCategory>
 		<iconPath>UI/Icons/Genes/BX_Hexmaster</iconPath>
 	</GeneDef>
 </Defs>
