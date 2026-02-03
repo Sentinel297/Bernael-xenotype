@@ -20,7 +20,6 @@
 				<minSeverity>1</minSeverity>
 				<label>Dark</label>
 				<hungerRateFactor>0.5</hungerRateFactor>
-				<becomeVisible>false</becomeVisible>
 			</li>
 			<li>
 				<becomeVisible>false</becomeVisible>
