@@ -20,7 +20,6 @@ namespace Bernael_Xenotype
         public static GeneDef BX_DepravedHead;
         public static TaleDef BX_ConsumedGrace;
         public static XenotypeDef BX_Bernael;
-        public static HediffDef BX_Mutation_Hediff;
         public static HediffDef BX_Blindness;
         public static ThoughtDef BX_ConsumedGraceThoughtMood;
         public static ThoughtDef BX_HeardDarkSpeech;
@@ -33,7 +32,6 @@ namespace Bernael_Xenotype
 
         [MayRequire("Sov.Nephilim")]
         public static GeneDef GS_Grace_New;
-
         [MayRequire("Sov.Nephilim")]
         public static GeneDef BX_Grace_Galling;
         [MayRequire("Sov.Nephilim")]
@@ -41,5 +39,8 @@ namespace Bernael_Xenotype
 
         [MayRequire("Sov.Nephilim")]
         public static XenotypeDef GS_Nephilim;
+
+        [MayRequire("Sov.Nephilim")]
+        public static HediffDef BX_Mutation_Hediff;
     }
 }

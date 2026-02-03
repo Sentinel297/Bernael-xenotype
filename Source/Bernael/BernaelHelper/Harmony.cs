@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Verse;
 using HarmonyLib;
 using EBSGFramework;
 using RimWorld;
 using System.Reflection;
 using JetBrains.Annotations;
-using UnityEngine;
 
 namespace Bernael_Xenotype
 {
@@ -21,19 +17,30 @@ namespace Bernael_Xenotype
             harmony.PatchAll();
         }
 
-        [HarmonyPatch(typeof(ResourceGene), nameof(ResourceGene.Tick))]
+        [HarmonyPatch]
         public static class Patch_Grace
         {
+            public static MethodBase TargetMethod()
+            {
+                if (!ModsConfig.IsActive("EBSG.Framework")) return null;
+
+                var type = AccessTools.TypeByName("EBSGFramework.ResourceGene");
+                if (type == null) return null;
+                return AccessTools.Method(type, "Tick");
+            }
+
             [UsedImplicitly]
             private static bool Prepare()
             {
                 return ModsConfig.IsActive("Sov.Nephilim");
             }
 
-            public static void Postfix(ref ResourceGene __instance)
+            public static void Postfix(ref object __instance)
             {
-                Pawn pawn = __instance.pawn;
-                if (!__instance.pawn.IsHashIntervalTick(180) || __instance.def != BernaelDefOf.GS_Grace_New || __instance.Resource.Value > 0 || !pawn.InMentalState) return;
+                ResourceGene resourceGene = __instance as ResourceGene;
+                if (resourceGene == null) return;
+                Pawn pawn = resourceGene.pawn;
+                if (!resourceGene.pawn.IsHashIntervalTick(180) || resourceGene.def != BernaelDefOf.GS_Grace_New || resourceGene.Resource.Value > 0 || !pawn.InMentalState) return;
 
                 pawn.MorbOut(BernaelDefOf.BX_Bernael);
             }

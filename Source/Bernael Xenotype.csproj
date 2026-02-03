@@ -44,6 +44,7 @@
     <Compile Include="Bernael\Hediffs\Hediff_BernaelToNephilim.cs" />
     <Compile Include="Bernael\Hediffs\Hediff_NourishingDarkness.cs" />
     <Compile Include="Bernael\Hediffs\Hediff_Reaper%27sEcstasy.cs" />
+    <Compile Include="Bernael\Hediffs\Hediff_SeverityBasedOnNeed.cs" />
     <Compile Include="Bernael\SoulDrain\Comps\CompAbilityEffect_CreateArcanaStone.cs" />
     <Compile Include="Bernael\SoulDrain\Comps\CompAbilityEffect_SoulCost.cs" />
     <Compile Include="Bernael\SoulDrain\Comps\CompAbilityEffect_SoulDrain.cs" />

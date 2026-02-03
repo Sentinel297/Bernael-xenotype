@@ -188,49 +188,7 @@
 		</modExtensions>
 	</GeneDef>
 	
-	<HediffDef>
-		<defName>BX_WitheredSoulHediff</defName>
-		<label>Withered Soul</label>
-		<description>person to experience pain if they are in an bad mood</description>
-		<everCurableByItem>false</everCurableByItem>
-		<initialSeverity>0.001</initialSeverity>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<stages>
-			<li>
-				<painOffset>0.35</painOffset>
-				<label>Huge pain</label>
-				<minSeverity>0</minSeverity>
-			</li>
-			<li>
-				<painOffset>0.25</painOffset>
-				<label>Serious pain</label>
-				<minSeverity>0.3</minSeverity>
-			</li>
-			<li>
-				<painOffset>0.15</painOffset>
-				<label>Aching pain</label>
-				<minSeverity>0.6</minSeverity>
-			</li>
-			<li>
-				<label>Absence of pain</label>
-				<minSeverity>1</minSeverity>
-			</li>
-		</stages>
-		<comps>
-			<li Class="EBSGFramework.HediffCompProperties_SeverityByNeedLevel">
-				<need>Mood</need>
-				<severity>
-					<points>
-						<li>(0,0)</li>
-						<li>(0.2,0.3)</li>
-						<li>(0.3,0.6)</li>
-						<li>(0.4,1)</li>
-					</points>
-				</severity>
-			</li>
-		</comps>
-	</HediffDef>
+<!-- Moved withered soul hediff to the hediff file -->
 	
 	<GeneDef>
 		<defName>BX_NourishingDarkness</defName>

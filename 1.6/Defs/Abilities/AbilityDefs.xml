@@ -8,7 +8,7 @@
 
 	<AbilityDef ParentName="AbilityTouchBase">
 		<defName>BX_SoulFeeding</defName>
-		<label>soulfeed</label>
+		<label>Soul drain</label>
 		<description>Touch the target and extract their life essence directly from their skin. The target will lose ??? and will be horrified by the interaction, but will be otherwise unharmed.\n\nCan only target non-soulstarved humans. Soul gain is affected by the target's body size.</description>
 		<iconPath>UI/Icons/Genes/BX_LifeDrain</iconPath>
 		<category>Bernael</category>
