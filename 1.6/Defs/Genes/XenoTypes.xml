@@ -10,9 +10,7 @@
 	<inheritable>true</inheritable>
 	<genes>
 		<li>BX_Mastermind</li>
-		<li>BX_Grace_Galling</li>
 		<li>BX_Nihilism</li>
-		<li>BX_GracePendulum</li>
 		<li>BX_Hexmaster</li>
 		<li>BX_NourishingDarkness</li>
 		<li>BX_DarkSpeech</li>
@@ -37,9 +35,12 @@
 		<li>AptitudePoor_Mining</li>
 		<!-- Soul Energy -->
 		<li>BX_SoulStarved</li>
+		<li>BX_ReaperEcstasy</li>
 		<!-- Abilities -->
 		<li>BX_SoulFeeder</li>
-
+		<!-- Nephilim Only -->
+		<li MayRequire="Sov.Nephilim">BX_Grace_Galling</li>
+		<li MayRequire="Sov.Nephilim">BX_GracePendulum</li>
 	</genes>
 </XenotypeDef>
 

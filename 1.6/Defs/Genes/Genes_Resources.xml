@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-    <GeneDef>
+	<GeneDef>
 		<defName>BX_SoulStarved</defName>
 		<label>soul eater</label>
 		<description>Carriers of this gene have a reserve of dark magical strength powered by souls. dark arcana can be gained by consuming the souls of the unfortunate and spent in various ways, all of which are unlocked by other genes.\n\nCarriers lose 2 dark arcana per day from magical entropy.</description>
@@ -16,7 +15,7 @@
 		<showGizmoOnWorldView>true</showGizmoOnWorldView>
 		<showGizmoWhenDrafted>true</showGizmoWhenDrafted>
 		<resourceDescription>A reserve of dark magical strength which can be gained and spent in a variety of ways.\n\nHemogen can be increased by consuming souls from a human or consuming soul-trapped objects. You can obtain dark arcana using the 'extract soul' operation on a non-undead human.\n\nIf dark arcana reaches zero, {PAWN_nameDef} will become very unhappy.</resourceDescription>
-		<iconPath>UI/Icons/Genes/Bernael_Gene_SoulEater</iconPath>
+		<iconPath>UI/Icons/Genes/BX_SoulEater</iconPath>
 		<selectionWeight>0</selectionWeight>
 		<displayCategory>BX_DarkEnergy</displayCategory>
 		<displayOrderInCategory>-2</displayOrderInCategory>
@@ -25,7 +24,9 @@
 		</customEffectDescriptions>
 		<symbolPack>
 			<prefixSymbols>
-				<li><symbol>undead</symbol></li>
+				<li>
+					<symbol>undead</symbol>
+				</li>
 			</prefixSymbols>
 		</symbolPack>
 		<minAgeActive>3</minAgeActive>
@@ -33,8 +34,14 @@
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>1</biostatMet>
 		<exclusionTags>
-		  <li>BX_SoulStarved</li>
+			<li>BX_SoulStarved</li>
 		</exclusionTags>
+	<modExtensions>
+		<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Genes.GeneExtension">
+			<backgroundPathXenogenes>UI/Icons/Genes/BX_ArchogenesDark</backgroundPathXenogenes>
+			<backgroundPathEndogenes>UI/Icons/Genes/BX_ArchogenesDark</backgroundPathEndogenes>
+			<backgroundPathArchite>UI/Icons/Genes/BX_ArchogenesDark</backgroundPathArchite>
+		</li>
+	</modExtensions>
 	</GeneDef>
-
 </Defs>

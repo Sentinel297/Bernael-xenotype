@@ -35,5 +35,19 @@ namespace Bernael_Xenotype
             }
             return ingestionOutcome;
         }
+
+        public static Gamecomponent_PsychicSight GetGamePsychicSightComp(this Game game)
+        {
+
+            var comp = game.GetComponent<Gamecomponent_PsychicSight>();
+
+            if (comp == null)
+            {
+                comp = new Gamecomponent_PsychicSight(game);
+                game.components.Add(comp);
+            }
+
+            return comp;
+        }
     }
 }

@@ -1,4 +1,6 @@
 <LanguageData>
 <BX_Mutation_CooldownFinished>Awaiting Grace</BX_Mutation_CooldownFinished>
 <BX_Mutation_MutatesIn>{0} Usages left before mutation</BX_Mutation_MutatesIn>
+<BX_ReaperEcstasyKillCount>{0}/{1} Kills</BX_ReaperEcstasyKillCount>
+<BX_ReaperEcstasyKillCountMax>MAX Kills</BX_ReaperEcstasyKillCountMax>
 </LanguageData>

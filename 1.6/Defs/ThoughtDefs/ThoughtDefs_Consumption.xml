@@ -38,18 +38,4 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-  <!-- Dark speech -->
-    <ThoughtDef>
-    <defName>BX_HeardDarkSpeech</defName>
-    <durationDays>1</durationDays>
-    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-    <stages>
-      <li>
-        <label>Dark Speech</label>
-        <description>What did it say? Why is this thing here?</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
 </Defs>

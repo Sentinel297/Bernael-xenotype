@@ -61,4 +61,97 @@
 			<!-- </li> -->
 		</comps>
 	</HediffDef>
+	
+<HediffDef>
+	<defName>BX_Blindness</defName>
+	<label>Missing Eye</label>
+	<description>The eyes of this person are missing, only their eyesocket remains.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0, 0.5)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+		<partEfficiencyOffset>-1</partEfficiencyOffset>
+		</li>
+	</stages>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>601</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>false</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
+
+<HediffDef>
+	<defName>BX_ReaperEcstasy</defName>
+	<label>Reaper's Ecstasy</label>
+	<description>A dark psychic phenomenon causes this creature to feed upon the soul of fallen enemies, increasing psychic prowess while slightly refilling their soul saturation.</description>
+	<hediffClass>Bernael_Xenotype.Hediff_ReapersEcstasy</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>100</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0, 0.5)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<!-- x = Severity, y = stat factor -->
+			<statFactorsBySeverity>
+				<li>
+					<stat>PsychicSensitivity</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, 1)</li>
+							<li>(1, 1)</li>
+							<li>(100, 10)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+				<li MayRequire="Ludeon.Rimworld.Royalty">
+					<stat>PsychicEntropyGain</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, 1)</li>
+							<li>(1, 1)</li>
+							<li>(100, 0.1)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+				<li MayRequire="Ludeon.Rimworld.Royalty">
+					<stat>PsychicEntropyMax</stat>
+					<valueBySeverity>
+						<points>
+							<li>(0, 1)</li>
+							<li>(1, 1)</li>
+							<li>(100, 5)</li>
+						</points>
+					</valueBySeverity>
+				</li>
+			</statFactorsBySeverity>
+		</li>
+	</stages>
+	<modExtensions>
+		<li Class="Bernael_Xenotype.ReaperModExt">
+			<killRefillPct>10</killRefillPct>
+		</li>
+	</modExtensions>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>601</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>false</showRemainingTime> -->
+		<!-- </li> -->
+	</comps>
+</HediffDef>
 </Defs>
