@@ -23,6 +23,7 @@ namespace Bernael_Xenotype
         {
             public static MethodBase TargetMethod()
             {
+                if (!ModsConfig.IsActive("EBSG.Framework")) return null;
                 var type = AccessTools.TypeByName("EBSGFramework.ResourceGene");
                 return type != null ? AccessTools.Method(type, "Tick") : null;
             }
@@ -33,12 +34,15 @@ namespace Bernael_Xenotype
                 return ModsConfig.IsActive("Sov.Nephilim");
             }
 
-            public static void Postfix(ref object __instance)
+            static readonly Type type = AccessTools.TypeByName("EBSGFramework.ResourceGene");
+            static readonly FieldInfo geneDef = AccessTools.Field(type, "def");
+            static readonly FieldInfo creature = AccessTools.Field(type, "pawn");
+
+            public static void Postfix(ref Gene_Resource __instance)
             {
-                ResourceGene resourceGene = __instance as ResourceGene;
-                if (resourceGene == null) return;
-                Pawn pawn = resourceGene.pawn;
-                if (!resourceGene.pawn.IsHashIntervalTick(180) || resourceGene.def != BernaelDefOf.GS_Grace_New || resourceGene.Resource.Value > 0 || !pawn.InMentalState) return;
+                if (type == null || !typeof(Gene_Resource).IsAssignableFrom(__instance.def.geneClass)) return;
+                Pawn pawn = (Pawn)(creature.GetValue(__instance));
+                if (!pawn.IsHashIntervalTick(180) || (GeneDef)(geneDef.GetValue(__instance)) != BernaelDefOf.GS_Grace_New || __instance.Value > 0 || !pawn.InMentalState) return;
 
                 pawn.TurnIntoXenotype(BernaelDefOf.BX_Bernael);
             }

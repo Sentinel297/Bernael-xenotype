@@ -10,7 +10,7 @@ namespace Bernael_Xenotype
         public override void Notify_IngestedThing(Thing thing, int numTaken)
         {
             base.Notify_IngestedThing(thing, numTaken);
-            if (!ModsConfig.IsActive("Sov.Nephilim") || pawn.health == null) return;
+            if (!ModsConfig.IsActive("Sov.Nephilim") || pawn.health == null || pawn?.genes?.GetGene(BernaelDefOf.GS_Grace_New) != null) return;
             
             IngestionOutcomeDoer_OffsetResource outcomeDoer_OffsetResource = (IngestionOutcomeDoer_OffsetResource)thing.def.GetGraceOutcomeDoer();
             if (outcomeDoer_OffsetResource == null) return;
