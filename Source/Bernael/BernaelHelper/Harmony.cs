@@ -5,6 +5,7 @@ using EBSGFramework;
 using RimWorld;
 using System.Reflection;
 using JetBrains.Annotations;
+using System;
 
 namespace Bernael_Xenotype
 {
@@ -22,11 +23,8 @@ namespace Bernael_Xenotype
         {
             public static MethodBase TargetMethod()
             {
-                if (!ModsConfig.IsActive("EBSG.Framework")) return null;
-
                 var type = AccessTools.TypeByName("EBSGFramework.ResourceGene");
-                if (type == null) return null;
-                return AccessTools.Method(type, "Tick");
+                return type != null ? AccessTools.Method(type, "Tick") : null;
             }
 
             [UsedImplicitly]
@@ -42,7 +40,7 @@ namespace Bernael_Xenotype
                 Pawn pawn = resourceGene.pawn;
                 if (!resourceGene.pawn.IsHashIntervalTick(180) || resourceGene.def != BernaelDefOf.GS_Grace_New || resourceGene.Resource.Value > 0 || !pawn.InMentalState) return;
 
-                pawn.MorbOut(BernaelDefOf.BX_Bernael);
+                pawn.TurnIntoXenotype(BernaelDefOf.BX_Bernael);
             }
         }
 

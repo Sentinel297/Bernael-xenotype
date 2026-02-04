@@ -27,7 +27,7 @@ namespace Bernael_Xenotype
             base.Notify_IngestedThing(thing, amount);
             if (!available || !ModsConfig.IsActive("Sov.Nephilim")) return;
 
-            IngestionOutcomeDoer_OffsetResource ingestionOutcome = thing.def.GetGraceOutcomeDoer();
+            IngestionOutcomeDoer_OffsetResource ingestionOutcome = (IngestionOutcomeDoer_OffsetResource)thing.def.GetGraceOutcomeDoer();
             if (ingestionOutcome == null) return;
 
             available = false;
@@ -43,7 +43,7 @@ namespace Bernael_Xenotype
 
             if (daysTillTransform > 0) return;
             cooldown = 0;
-            pawn.MorbOut(BernaelDefOf.GS_Nephilim);
+            pawn.TurnIntoXenotype(BernaelDefOf.GS_Nephilim);
 
             if (pawn.Map != null)
                 FleckMaker.Static(pawn.DrawPos, pawn.Map, FleckDefOf.PsycastSkipFlashEntry);

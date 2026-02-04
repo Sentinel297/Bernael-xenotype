@@ -1,4 +1,5 @@
-﻿using EBSGFramework;
+﻿using System;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -7,7 +8,7 @@ namespace Bernael_Xenotype
     public static class BernaelUtility
     {
 
-        public static void MorbOut(this Pawn pawn, XenotypeDef xenotypeDef)
+        public static void TurnIntoXenotype(this Pawn pawn, XenotypeDef xenotypeDef)
         {
             for (int i = pawn.genes.GenesListForReading.Count - 1; i >= 0; i--)
             {
@@ -23,22 +24,21 @@ namespace Bernael_Xenotype
             pawn.genes.SetXenotype(xenotypeDef);
         }
 
-        public static IngestionOutcomeDoer_OffsetResource GetGraceOutcomeDoer(this ThingDef thingDef)
+        public static object GetGraceOutcomeDoer(this ThingDef thingDef)
         {
-            if (thingDef.ingestible == null || thingDef.ingestible.outcomeDoers.NullOrEmpty()) return null;
-            IngestionOutcomeDoer_OffsetResource ingestionOutcome = null;
+            if (!ModsConfig.IsActive("EBSG.Framework") || thingDef.ingestible == null || thingDef.ingestible.outcomeDoers.NullOrEmpty()) return null;
+            Type type = AccessTools.TypeByName("EBSGFramework.IngestionOutcomeDoer_OffsetResource");
+            if (type == null) return type;
             foreach (IngestionOutcomeDoer ingestionOutcomeDoer in thingDef.ingestible.outcomeDoers)
             {
-                if (ingestionOutcomeDoer is not IngestionOutcomeDoer_OffsetResource warden || warden.mainResourceGene != BernaelDefOf.GS_Grace_New) continue;
-                ingestionOutcome = warden;
-                break;
+                if (ingestionOutcomeDoer.GetType() != type || (GeneDef)(AccessTools.Field(type, "mainResourceGene").GetValue(ingestionOutcomeDoer)) != BernaelDefOf.GS_Grace_New) continue;
+                return ingestionOutcomeDoer;
             }
-            return ingestionOutcome;
+            return null;
         }
 
         public static Gamecomponent_PsychicSight GetGamePsychicSightComp(this Game game)
         {
-
             var comp = game.GetComponent<Gamecomponent_PsychicSight>();
 
             if (comp == null)
@@ -46,7 +46,6 @@ namespace Bernael_Xenotype
                 comp = new Gamecomponent_PsychicSight(game);
                 game.components.Add(comp);
             }
-
             return comp;
         }
     }
