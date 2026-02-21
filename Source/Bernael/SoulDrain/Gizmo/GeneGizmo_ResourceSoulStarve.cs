@@ -108,11 +108,11 @@ namespace Bernael_Xenotype
             {
                 if (gene.targetValue <= 0f)
                 {
-                    text += "MB_NeverConsumeSoul".Translate().ToString();
+                    text += "BX_NeverConsumeSoul".Translate().ToString();
                 }
                 else
                 {
-                    text = text + ("MB_ConsumeSoulBelow".Translate() + ": ") + gene.PostProcessValue(gene.targetValue);
+                    text = text + ("BX_ConsumeSoulBelow".Translate() + ": ") + gene.PostProcessValue(gene.targetValue);
                 }
             }
             if (!drainGenes.NullOrEmpty())

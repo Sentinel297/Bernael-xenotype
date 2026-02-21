@@ -5,13 +5,8 @@ namespace Bernael_Xenotype
 {
     public class CompAbilityEffect_SoulDrain : CompAbilityEffect
     {
-        public new CompProperties_AbilitySoulDrain Props
-        {
-            get
-            {
-                return (CompProperties_AbilitySoulDrain)props;
-            }
-        }
+        private new CompProperties_AbilitySoulDrain Props => (CompProperties_AbilitySoulDrain)props;
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
@@ -20,10 +15,8 @@ namespace Bernael_Xenotype
             {
                 return;
             }
-            Log.Message("HERE?");
             Utility.ConvertBaby(parent.pawn, pawn);
-            Log.Message("AND HERE?");
-            Utility.DoDrain(parent.pawn, pawn, Props.soulGain, Props.resistanceGain, Props.thoughtDefToGiveTarget, Props.opinionThoughtDefToGiveTarget);
+            Utility.DoDrain(parent.pawn, pawn, Props.soulGain, Props.resistanceGain, Props.hediffToGiveTarget, Props.hediffSeverity, Props.thoughtDefToGiveTarget, Props.opinionThoughtDefToGiveTarget);
 
         }
 
@@ -65,7 +58,7 @@ namespace Bernael_Xenotype
                     return false;
                 }
             }
-            if (pawn.IsWildMan() && !pawn.IsPrisonerOfColony && !pawn.Downed)
+            if (pawn.IsWildMan() && !pawn.IsPrisonerOfColony && !pawn.Downed || pawn.InMentalState || PrisonBreakUtility.IsPrisonBreaking(pawn))
             {
                 if (throwMessages)
                 {
@@ -73,87 +66,67 @@ namespace Bernael_Xenotype
                 }
                 return false;
             }
-            if (pawn.InMentalState || PrisonBreakUtility.IsPrisonBreaking(pawn))
+            if (!ModsConfig.AnomalyActive || !pawn.IsMutant || pawn.mutant.Def.canBleed) return true;
+            if (throwMessages)
             {
-                if (throwMessages)
-                {
-                    Messages.Message("MessageCantUseOnResistingPerson".Translate(parent.def.Named("ABILITY")), pawn, MessageTypeDefOf.RejectInput, false);
-                }
-                return false;
+                Messages.Message("MessageCannotUseOnNonBleeder".Translate(parent.def.Named("ABILITY")), pawn, MessageTypeDefOf.RejectInput, false);
             }
-            if (ModsConfig.AnomalyActive && pawn.IsMutant && !pawn.mutant.Def.canBleed)
-            {
-                if (throwMessages)
-                {
-                    Messages.Message("MessageCannotUseOnNonBleeder".Translate(parent.def.Named("ABILITY")), pawn, MessageTypeDefOf.RejectInput, false);
-                }
-                return false;
-            }
-            return true;
+            return false;
         }
 
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
             Pawn pawn = target.Pawn;
-            if (pawn != null)
+            if (pawn == null) return base.ExtraLabelMouseAttachment(target);
+            string text = null;
+            if (pawn.HostileTo(parent.pawn) && !pawn.Downed)
             {
-                string text = null;
-                if (pawn.HostileTo(parent.pawn) && !pawn.Downed)
-                {
-                    text += "MessageCantUseOnResistingPerson".Translate(parent.def.Named("ABILITY"));
-                }
-                float num = BloodlossAfterBite(pawn);
-                if (num >= HediffDefOf.BloodLoss.lethalSeverity)
-                {
-                    if (!text.NullOrEmpty())
-                    {
-                        text += "\n";
-                    }
-                    text += "WillKill".Translate();
-                }
-                else if (HediffDefOf.BloodLoss.stages[HediffDefOf.BloodLoss.StageAtSeverity(num)].lifeThreatening)
-                {
-                    if (!text.NullOrEmpty())
-                    {
-                        text += "\n";
-                    }
-                    text += "WillCauseSeriousBloodloss".Translate();
-                }
-                return text;
+                text += "MessageCantUseOnResistingPerson".Translate(parent.def.Named("ABILITY"));
             }
-            return base.ExtraLabelMouseAttachment(target);
+            float num = HediffSeverityAfterAbility(pawn);
+            if (num >= Props.hediffToGiveTarget.lethalSeverity)
+            {
+                if (!text.NullOrEmpty())
+                {
+                    text += "\n";
+                }
+                text += "WillKill".Translate();
+            }
+            else if (Props.hediffToGiveTarget.stages[Props.hediffToGiveTarget.StageAtSeverity(num)].lifeThreatening)
+            {
+                if (!text.NullOrEmpty())
+                {
+                    text += "\n";
+                }
+                text += "BX_WillCauseSeriousSoulDrain".Translate();
+            }
+            return text;
         }
 
         public override Window ConfirmationDialog(LocalTargetInfo target, Action confirmAction)
         {
             Pawn pawn = target.Pawn;
-            if (pawn != null)
+            if (pawn == null) return null;
+            if (pawn.genes != null && pawn.genes.HasActiveGene(GeneDefOf.Deathless))
             {
-                if (pawn.genes != null && pawn.genes.HasActiveGene(GeneDefOf.Deathless))
-                {
-                    return null;
-                }
-                float num = BloodlossAfterBite(pawn);
-                if (num >= HediffDefOf.BloodLoss.lethalSeverity)
-                {
-                    return Dialog_MessageBox.CreateConfirmation("WarningPawnWillDieFromBloodfeeding".Translate(pawn.Named("PAWN")), confirmAction, true);
-                }
-                if (HediffDefOf.BloodLoss.stages[HediffDefOf.BloodLoss.StageAtSeverity(num)].lifeThreatening)
-                {
-                    return Dialog_MessageBox.CreateConfirmation("WarningPawnWillHaveSeriousBloodlossFromBloodfeeding".Translate(pawn.Named("PAWN")), confirmAction, true);
-                }
+                return null;
             }
-            return null;
+            float num = HediffSeverityAfterAbility(pawn);
+            if (num >= Props.hediffToGiveTarget.lethalSeverity)
+            {
+                return Dialog_MessageBox.CreateConfirmation("BX_WarningPawnWillDieFromFeeding".Translate(pawn.Named("PAWN")), confirmAction, true);
+            }
+            return Props.hediffToGiveTarget.stages[Props.hediffToGiveTarget.StageAtSeverity(num)].lifeThreatening ? Dialog_MessageBox.CreateConfirmation("BX_WarningPawnWillHaveSeriousSoulDrainFromFeeding".Translate(pawn.Named("PAWN")), confirmAction, true) : null;
         }
 
-        private float BloodlossAfterBite(Pawn target)
+        private float HediffSeverityAfterAbility(Pawn target)
         {
             if (target.Dead || !target.RaceProps.IsFlesh)
             {
                 return 0f;
             }
-            float num = Props.targetBloodLoss;
-            Hediff firstHediffOfDef = target.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
+            float num = Props.hediffSeverity;
+            Hediff firstHediffOfDef = target.health.hediffSet.GetFirstHediffOfDef(Props.hediffToGiveTarget);
             if (firstHediffOfDef != null)
             {
                 num += firstHediffOfDef.Severity;

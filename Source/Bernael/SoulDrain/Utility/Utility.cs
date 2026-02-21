@@ -31,11 +31,15 @@ namespace Bernael_Xenotype
             }
         }
 
-        public static void DoDrain(Pawn biter, Pawn victim, float targetSoulGain, float victimResistanceGain, ThoughtDef thoughtDefToGiveTarget = null, ThoughtDef opinionThoughtToGiveTarget = null)
+        public static void DoDrain(Pawn biter, Pawn victim, float targetSoulGain, float victimResistanceGain, HediffDef hediffToGiveTarget, float victimSoulDrainSeverity = 0.4999f, ThoughtDef thoughtDefToGiveTarget = null, ThoughtDef opinionThoughtToGiveTarget = null)
         {
             if (!ModLister.CheckBiotech("Sanguophage bite"))
             {
                 return;
+            }
+            if (hediffToGiveTarget == null)
+            {
+                hediffToGiveTarget = HediffDefOf.BloodLoss;
             }
             float num2 = targetSoulGain * victim.BodySize;
             OffsetSoul(biter, num2);
@@ -44,22 +48,10 @@ namespace Bernael_Xenotype
             if (thoughtDefToGiveTarget != null)
             {
                 Pawn_NeedsTracker needs2 = victim.needs;
-                if (needs2 != null)
-                {
-                    Need_Mood mood = needs2.mood;
-                    if (mood != null)
-                    {
-                        ThoughtHandler thoughts = mood.thoughts;
-                        if (thoughts != null)
-                        {
-                            MemoryThoughtHandler memories = thoughts.memories;
-                            if (memories != null)
-                            {
-                                memories.TryGainMemory((Thought_Memory)ThoughtMaker.MakeThought(thoughtDefToGiveTarget), biter);
-                            }
-                        }
-                    }
-                }
+                Need_Mood mood = needs2?.mood;
+                ThoughtHandler thoughts = mood?.thoughts;
+                MemoryThoughtHandler memories = thoughts?.memories;
+                memories?.TryGainMemory((Thought_Memory)ThoughtMaker.MakeThought(thoughtDefToGiveTarget), biter);
             }
             if (opinionThoughtToGiveTarget != null)
             {
@@ -69,13 +61,12 @@ namespace Bernael_Xenotype
                 MemoryThoughtHandler memories2 = thoughts2?.memories;
                 memories2?.TryGainMemory((Thought_Memory)ThoughtMaker.MakeThought(opinionThoughtToGiveTarget), biter);
             }
-            //if (targetBloodLoss > 0f)
-            //{
-            //    victim.health.AddHediff(HediffDefOf.BloodfeederMark, ExecutionUtility.ExecuteCutPart(victim), null, null);
-            //    Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, victim, null);
-            //    hediff.Severity = targetBloodLoss;
-            //    victim.health.AddHediff(hediff, null, null, null);
-            //}
+            if (victimSoulDrainSeverity > 0f)
+            {
+                Hediff hediff = HediffMaker.MakeHediff(hediffToGiveTarget, victim, null);
+                hediff.Severity = victimSoulDrainSeverity;
+                victim.health.AddHediff(hediff, null, null, null);
+            }
             if (victim.IsPrisoner && victimResistanceGain > 0f)
             {
                 victim.guest.resistance = Mathf.Min(victim.guest.resistance + victimResistanceGain, victim.kindDef.initialResistanceRange.Value.TrueMax);

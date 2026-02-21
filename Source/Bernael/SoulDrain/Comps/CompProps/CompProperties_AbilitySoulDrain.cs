@@ -20,7 +20,8 @@ namespace Bernael_Xenotype
         public ThoughtDef thoughtDefToGiveTarget;
         public ThoughtDef opinionThoughtDefToGiveTarget;
         public float resistanceGain;
-        public float targetBloodLoss = 0.4499f;
+        public HediffDef hediffToGiveTarget;
+        public float hediffSeverity = 0.4499f;
 
     }
 }

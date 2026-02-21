@@ -35,6 +35,9 @@
 				<thoughtDefToGiveTarget>FedOn</thoughtDefToGiveTarget>
 				<opinionThoughtDefToGiveTarget>FedOn_Social</opinionThoughtDefToGiveTarget>
 				<resistanceGain>1</resistanceGain>
+				<hediffToGiveTarget>BX_SoulDrained</hediffToGiveTarget>
+				<hediffSeverity>0.4499</hediffSeverity>
+
 			</li>
 			<li Class="CompProperties_AbilityRequiresCapacity">
 				<capacity>Manipulation</capacity>
