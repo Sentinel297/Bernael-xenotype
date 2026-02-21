@@ -25,6 +25,8 @@ namespace Bernael_Xenotype
         public static AbilityDef BX_SoulFeeding;
         public static ThoughtDef BX_ConsumedGraceThoughtMood;
         public static ThoughtDef BX_HeardDarkSpeech;
+        public static ThoughtDef BX_FedOn;
+        public static ThoughtDef BX_FedOn_Social;
 
         public static HistoryEventDef BX_ExtractedSoul;
 
@@ -33,6 +35,8 @@ namespace Bernael_Xenotype
 
         public static ThingDef BX_BottledSoul;
         public static RecipeDef BX_ExtractSoul;
+
+        public static JobDef BX_PrisonerSoulFeed;
 
         [MayRequire("Sov.Nephilim")]
         public static GeneDef GS_Grace_New;

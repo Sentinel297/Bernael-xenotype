@@ -58,6 +58,7 @@
     <Compile Include="Bernael\SoulDrain\SoulDrainStuff\Alert_LowSoulEnergy.cs" />
     <Compile Include="Bernael\SoulDrain\SoulDrainStuff\Gene_Soul.cs" />
     <Compile Include="Bernael\SoulDrain\SoulDrainStuff\Gene_SoulDrain.cs" />
+    <Compile Include="Bernael\SoulDrain\SoulDrainStuff\JobDriver_PrisonerSoulFeed.cs" />
     <Compile Include="Bernael\SoulDrain\SoulDrainStuff\JobGiver_GetSoulGem.cs" />
     <Compile Include="Bernael\SoulDrain\SoulDrainStuff\Recipe_ExtractSoul.cs" />
     <Compile Include="Bernael\SoulDrain\SoulDrainStuff\Verb_CastAbilitySoul.cs" />

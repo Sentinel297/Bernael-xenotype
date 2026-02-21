@@ -39,6 +39,45 @@
         </stages>
     </ThoughtDef>
 
+    <ThoughtDef>
+        <defName>BX_FedOn</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>5</durationDays>
+        <nullifyingTraits>
+            <li>Masochist</li>
+        </nullifyingTraits>
+        <nullifyingPrecepts>
+            <li>Bloodfeeders_Revered</li>
+        </nullifyingPrecepts>
+        <stages>
+            <li>
+                <label>fed on by {0}</label>
+                <description>I was violated by a bloodfeeder like some kind of livestock.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BX_FedOn_Social</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>60</durationDays>
+        <stackLimit>50</stackLimit>
+        <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+        <nullifyingTraits>
+            <li>Masochist</li>
+        </nullifyingTraits>
+        <nullifyingPrecepts>
+            <li>Bloodfeeders_Revered</li>
+        </nullifyingPrecepts>
+        <stages>
+            <li>
+                <label>fed on</label>
+                <baseOpinionOffset>-20</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
   <!-- Dark speech -->
     <ThoughtDef>
     <defName>BX_HeardDarkSpeech</defName>

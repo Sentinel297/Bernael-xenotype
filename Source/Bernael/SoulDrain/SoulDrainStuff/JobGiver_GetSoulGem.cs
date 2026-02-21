@@ -89,7 +89,7 @@ namespace Bernael_Xenotype
                 Pawn prisoner = GetPrisoner(pawn);
                 if (prisoner != null)
                 {
-                    return JobMaker.MakeJob(JobDefOf.PrisonerBloodfeed, prisoner);
+                    return JobMaker.MakeJob(BernaelDefOf.BX_PrisonerSoulFeed, prisoner);
                 }
             }
             if (!gene_Soul.soulBasicGemsAllowed) return null;
