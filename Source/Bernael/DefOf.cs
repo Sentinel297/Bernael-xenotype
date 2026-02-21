@@ -21,8 +21,12 @@ namespace Bernael_Xenotype
         public static TaleDef BX_ConsumedGrace;
         public static XenotypeDef BX_Bernael;
         public static HediffDef BX_Blindness;
+        public static HediffDef BX_SoulDrained;
+        public static AbilityDef BX_SoulFeeding;
         public static ThoughtDef BX_ConsumedGraceThoughtMood;
         public static ThoughtDef BX_HeardDarkSpeech;
+
+        public static HistoryEventDef BX_ExtractedSoul;
 
         public static StatDef BX_SoulGainFactor;
         public static GeneDef BX_SoulStarved;

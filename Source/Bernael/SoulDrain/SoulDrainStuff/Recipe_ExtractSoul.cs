@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.Design.Serialization;
 using RimWorld;
 using Verse;
 
@@ -62,15 +61,15 @@ namespace Bernael_Xenotype
 				Messages.Message("MessagePawnHadNotEnoughBloodToProduceHemogenPack".Translate(pawn.Named("PAWN")), pawn, MessageTypeDefOf.NeutralEvent);
 				return;
 			}
-			Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, pawn);
-			hediff.Severity = 0.45f;
+			Hediff hediff = HediffMaker.MakeHediff(BernaelUtility.cachedSoulDrainedHediff, pawn);
+			hediff.Severity += BloodlossSeverity;
 			Utility.ConvertBaby(pawn, billDoer);
 
 			pawn.health.AddHediff(hediff);
 			OnSurgerySuccess(pawn, part, billDoer, ingredients, bill);
 			if (IsViolationOnPawn(pawn, part, Faction.OfPlayer))
 			{
-				ReportViolation(pawn, billDoer, pawn.HomeFaction, -1, HistoryEventDefOf.ExtractedHemogenPack);
+				ReportViolation(pawn, billDoer, pawn.HomeFaction, -1, BernaelDefOf.BX_ExtractedSoul);
 			}
 		}
 
@@ -84,10 +83,10 @@ namespace Bernael_Xenotype
 
 		private static bool PawnHasEnoughBloodForExtraction(Pawn pawn)
 		{
-			Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
+			Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(BernaelUtility.cachedSoulDrainedHediff);
 			if (firstHediffOfDef != null)
 			{
-				return firstHediffOfDef.Severity < 0.45f;
+				return firstHediffOfDef.Severity < MinBloodlossForFailure;
 			}
 			return true;
 		}

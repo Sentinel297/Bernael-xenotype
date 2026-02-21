@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Verse;
 using HarmonyLib;
-using EBSGFramework;
 using RimWorld;
 using System.Reflection;
 using JetBrains.Annotations;

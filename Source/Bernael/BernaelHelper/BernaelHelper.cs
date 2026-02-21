@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -8,7 +9,35 @@ namespace Bernael_Xenotype
     public static class BernaelUtility
     {
 
-        public static void TurnIntoXenotype(this Pawn pawn, XenotypeDef xenotypeDef)
+        private static HediffDef _soulDrainedHediff;
+
+        public static HediffDef cachedSoulDrainedHediff
+        {
+            get
+            {
+                if (_soulDrainedHediff == null)
+                {
+                    AbilityDef abilityDef = BernaelDefOf.BX_SoulFeeding;
+                    if (abilityDef != null)
+                    {
+                        foreach (AbilityCompProperties comp in abilityDef.comps)
+                        {
+                            if (comp is not CompProperties_AbilitySoulDrain soulDrainComp) continue;
+                            _soulDrainedHediff = soulDrainComp.hediffToGiveTarget;
+                            break;
+                        }
+                        if (_soulDrainedHediff == null)
+                        {
+                            _soulDrainedHediff = BernaelDefOf.BX_SoulDrained;
+                        }
+                    }
+                }
+                return _soulDrainedHediff;
+            }
+        }
+
+
+    public static void TurnIntoXenotype(this Pawn pawn, XenotypeDef xenotypeDef)
         {
             for (int i = pawn.genes.GenesListForReading.Count - 1; i >= 0; i--)
             {
