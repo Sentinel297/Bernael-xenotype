@@ -147,6 +147,7 @@
 	<modExtensions>
 		<li Class="Bernael_Xenotype.ReaperModExt">
 			<killRefillPct>10</killRefillPct>
+			<decayTickInterval>60</decayTickInterval>
 		</li>
 	</modExtensions>
 	<comps>
