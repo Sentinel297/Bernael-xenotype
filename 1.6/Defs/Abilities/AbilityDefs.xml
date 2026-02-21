@@ -32,8 +32,8 @@
 		<comps>
 			<li Class="Bernael_Xenotype.CompProperties_AbilitySoulDrain">
 				<soulGain>0.2</soulGain>
-				<thoughtDefToGiveTarget>FedOn</thoughtDefToGiveTarget>
-				<opinionThoughtDefToGiveTarget>FedOn_Social</opinionThoughtDefToGiveTarget>
+				<thoughtDefToGiveTarget>BX_FedOn</thoughtDefToGiveTarget>
+				<opinionThoughtDefToGiveTarget>BX_FedOn_Social</opinionThoughtDefToGiveTarget>
 				<resistanceGain>1</resistanceGain>
 				<hediffToGiveTarget>BX_SoulDrained</hediffToGiveTarget>
 				<hediffSeverity>0.4499</hediffSeverity>

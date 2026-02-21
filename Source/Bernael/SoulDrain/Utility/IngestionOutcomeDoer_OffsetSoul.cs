@@ -16,7 +16,7 @@ namespace Bernael_Xenotype
             if (ModsConfig.BiotechActive)
             {
                 string arg = (offset >= 0f) ? "+" : string.Empty;
-                yield return new StatDrawEntry(StatCategoryDefOf.BasicsNonPawnImportant, "MB_DarkArcana".Translate().CapitalizeFirst(), arg + Mathf.RoundToInt(offset * 100f), "MB_DarkArcana_Desc".Translate(), 1000);
+                yield return new StatDrawEntry(StatCategoryDefOf.BasicsNonPawnImportant, "BX_SoulEnergy".Translate().CapitalizeFirst(), arg + Mathf.RoundToInt(offset * 100f), "BX_SoulEnergy_Desc".Translate(), 1000);
             }
             yield break;
         }

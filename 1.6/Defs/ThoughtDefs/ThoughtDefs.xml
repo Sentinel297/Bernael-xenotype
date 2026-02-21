@@ -51,8 +51,8 @@
         </nullifyingPrecepts>
         <stages>
             <li>
-                <label>fed on by {0}</label>
-                <description>I was violated by a bloodfeeder like some kind of livestock.</description>
+                <label>drained by {0}</label>
+                <description>I was violated by a soul sucker like some kind of livestock.</description>
                 <baseMoodEffect>-5</baseMoodEffect>
             </li>
         </stages>
@@ -72,7 +72,7 @@
         </nullifyingPrecepts>
         <stages>
             <li>
-                <label>fed on</label>
+                <label>drained on</label>
                 <baseOpinionOffset>-20</baseOpinionOffset>
             </li>
         </stages>
