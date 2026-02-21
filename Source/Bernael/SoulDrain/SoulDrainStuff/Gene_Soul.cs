@@ -71,7 +71,7 @@ namespace Bernael_Xenotype
         public override void TickInterval(int delta)
         {
             base.TickInterval(delta);
-            GeneResourceDrainUtility.TickResourceDrainInterval(this, delta);
+            Utility.TickResourceDrainInterval(this, delta);
         }
 
         public override void SetTargetValuePct(float val)
@@ -94,7 +94,7 @@ namespace Bernael_Xenotype
             {
                 yield return gizmo;
             }
-            foreach (Gizmo gizmo2 in GeneResourceDrainUtility.GetResourceDrainGizmos(this))
+            foreach (Gizmo gizmo2 in Utility.GetResourceDrainGizmos(this))
             {
                 yield return gizmo2;
             }

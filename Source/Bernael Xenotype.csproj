@@ -67,7 +67,6 @@
     <Compile Include="Bernael\SoulDrain\Utility\AbilitySoul.cs" />
     <Compile Include="Bernael\SoulDrain\Utility\IngestionOutcomeDoer_OffsetSoul.cs" />
     <Compile Include="Bernael\SoulDrain\Utility\Utility.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
@@ -118,9 +117,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Analyzer Include="..\..\3112549163\1.6\Assemblies\EBSGFramework.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +124,9 @@
       <HintPath>..\..\3112549163\1.6\Assemblies\EBSGFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

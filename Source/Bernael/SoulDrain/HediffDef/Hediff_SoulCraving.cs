@@ -11,7 +11,12 @@ namespace Bernael_Xenotype
             get
             {
                 Pawn_GeneTracker genes = Pawn.genes;
-                return genes?.GetFirstGeneOfType<Gene_Soul>() == null;
+                if (genes?.GetFirstGeneOfType<Gene_Soul>() == null)
+                {
+                    Log.Message(">??");
+                    return true;
+                }
+                return false;
             }
         }
 
@@ -32,7 +37,9 @@ namespace Bernael_Xenotype
             base.CompPostTick(ref severityAdjustment);
             if (Soul != null)
             {
+                Log.Message(severityAdjustment);
                 severityAdjustment += (Soul.Value > 0f ? Props.severityPerHourSoul : Props.severityPerHourEmpty) / 2500f;
+                Log.Message(severityAdjustment);
             }
         }
 

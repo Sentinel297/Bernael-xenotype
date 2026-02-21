@@ -6,6 +6,34 @@ namespace Bernael_Xenotype
 {
     public class Utility
     {
+        public static void TickResourceDrainInterval(IGeneResourceDrain drain, int delta)
+        {
+            if (drain.CanOffset && drain.Resource != null)
+            {
+                OffsetResource(drain, (0f - drain.ResourceLossPerDay) * (float)delta / 60000f);
+            }
+        }
+        public static void OffsetResource(IGeneResourceDrain drain, float amnt)
+        {
+            if (drain.Resource != null)
+            {
+                float value = drain.Resource.Value;
+                drain.Resource.Value += amnt;
+                PostResourceOffset(drain, value);
+            }
+        }
+        public static void PostResourceOffset(IGeneResourceDrain drain, float oldValue)
+        {
+            if (oldValue > 0f && drain.Resource.Value <= 0f)
+            {
+                Pawn pawn = drain.Pawn;
+                if (!pawn.health.hediffSet.HasHediff(BernaelDefOf.BX_SoulCraving))
+                {
+                    pawn.health.AddHediff(BernaelDefOf.BX_SoulCraving);
+                }
+            }
+        }
+
         public static void OffsetSoul(Pawn pawn, float offset, bool applyStatFactor = true)
         {
             if (!ModsConfig.BiotechActive)
@@ -20,7 +48,17 @@ namespace Bernael_Xenotype
             Gene_SoulDrain gene_SoulDrain = genes?.GetFirstGeneOfType<Gene_SoulDrain>();
             if (gene_SoulDrain != null)
             {
-                GeneResourceDrainUtility.OffsetResource(gene_SoulDrain, offset);
+                OffsetResource(gene_SoulDrain, offset);
+                float value = gene_SoulDrain.Resource.Value;
+                gene_SoulDrain.Resource.Value += offset;
+                if (value > 0f && gene_SoulDrain.Resource.Value <= 0f)
+                {
+                    Pawn genePawn = gene_SoulDrain.Pawn;
+                    if (!genePawn.health.hediffSet.HasHediff(BernaelDefOf.BX_SoulCraving))
+                    {
+                        genePawn.health.AddHediff(BernaelDefOf.BX_SoulCraving);
+                    }
+                }
                 return;
             }
             Pawn_GeneTracker genes2 = pawn.genes;
@@ -102,6 +140,29 @@ namespace Bernael_Xenotype
                 }
             }
             victim.relations.AddDirectRelation(PawnRelationDefOf.Parent, drainer);
+        }
+
+        public static IEnumerable<Gizmo> GetResourceDrainGizmos(IGeneResourceDrain drain)
+        {
+            if (DebugSettings.ShowDevGizmos && drain.Resource != null)
+            {
+                Gene_Resource resource = drain.Resource;
+                Command_Action command_Action = new Command_Action();
+                command_Action.defaultLabel = "DEV: " + resource.ResourceLabel + " -10";
+                command_Action.action = delegate
+                {
+                    OffsetResource(drain, -0.1f);
+                };
+                yield return command_Action;
+                Command_Action command_Action2 = new Command_Action();
+                command_Action2.defaultLabel = "DEV: " + resource.ResourceLabel + " +10";
+                command_Action2.action = delegate
+                {
+                    OffsetResource(drain, 0.1f);
+                };
+                yield return command_Action2;
+            }
+
         }
     }
 }
