@@ -52,7 +52,6 @@
     <Compile Include="Bernael\SoulDrain\Comps\CompProps\CompProperties_AbilitySoulDrain.cs" />
     <Compile Include="Bernael\SoulDrain\Comps\CompProps\CompProperties_CreateArcanaStone.cs" />
     <Compile Include="Bernael\SoulDrain\Gizmo\GeneGizmo_ResourceSoulStarve.cs" />
-    <Compile Include="Bernael\SoulDrain\Harmony\HarmonyStart.cs" />
     <Compile Include="Bernael\SoulDrain\Harmony\Patch_BillMedical_GeneRequirement.cs" />
     <Compile Include="Bernael\SoulDrain\HediffDef\CompProperties\HediffCompProperties_SeverityFromSoul.cs" />
     <Compile Include="Bernael\SoulDrain\HediffDef\Hediff_SoulCraving.cs" />
