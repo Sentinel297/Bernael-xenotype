@@ -32,6 +32,15 @@ namespace Bernael_Xenotype
 
 		}
 
+		public override AcceptanceReport AvailableReport(Thing thing, BodyPartRecord part = null)
+		{
+			if (thing is Pawn pawn && pawn.DevelopmentalStage.Baby())
+			{
+				return "TooSmall".Translate();
+			}
+			return base.AvailableReport(thing, part);
+		}
+
 		public override bool CompletableEver(Pawn surgeryTarget)
 		{
 			if (base.CompletableEver(surgeryTarget))
@@ -61,9 +70,13 @@ namespace Bernael_Xenotype
 				Messages.Message("MessagePawnHadNotEnoughBloodToProduceHemogenPack".Translate(pawn.Named("PAWN")), pawn, MessageTypeDefOf.NeutralEvent);
 				return;
 			}
+			if (Utility.TryConvertBaby(pawn, billDoer))
+			{
+				return;
+			}
 			Hediff hediff = HediffMaker.MakeHediff(BernaelUtility.cachedSoulDrainedHediff, pawn);
 			hediff.Severity += BloodlossSeverity;
-			Utility.ConvertBaby(pawn, billDoer);
+
 
 			pawn.health.AddHediff(hediff);
 			OnSurgerySuccess(pawn, part, billDoer, ingredients, bill);
