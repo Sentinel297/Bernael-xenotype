@@ -75,10 +75,13 @@ namespace Bernael_Xenotype
             {
                 return;
             }
-            if (hediffToGiveTarget == null)
+            DevelopmentalStage? developmentStage = victim.ageTracker?.CurLifeStage?.developmentalStage;
+            if (developmentStage is DevelopmentalStage.Baby or DevelopmentalStage.Newborn)
             {
-                hediffToGiveTarget = HediffDefOf.BloodLoss;
+
+                return;
             }
+            hediffToGiveTarget ??= HediffDefOf.BloodLoss;
             float num2 = targetSoulGain * victim.BodySize;
             OffsetSoul(biter, num2);
             OffsetSoul(victim, -num2);
@@ -110,10 +113,10 @@ namespace Bernael_Xenotype
                 victim.guest.resistance = Mathf.Min(victim.guest.resistance + victimResistanceGain, victim.kindDef.initialResistanceRange.Value.TrueMax);
             }
         }
-        public static void ConvertBaby(Pawn drainer, Pawn victim)
+        public static bool TryConvertBaby(Pawn drainer, Pawn victim)
         {
             DevelopmentalStage? developmentStage = victim.ageTracker?.CurLifeStage?.developmentalStage;
-            if (developmentStage is not (DevelopmentalStage.Baby or DevelopmentalStage.Newborn)) return;
+            if (developmentStage is not (DevelopmentalStage.Baby or DevelopmentalStage.Newborn)) return false;
 
             XenotypeDef targetXenotype = drainer.genes.xenotype;
             victim.genes.xenotypeName = drainer.genes.xenotypeName;
@@ -124,7 +127,7 @@ namespace Bernael_Xenotype
             {
                 victim.genes.AddGene(gene, xenogene: true);
             }
-
+            List<DirectPawnRelation> relationsToRemove = [];
             List<DirectPawnRelation> relationList = victim.relations.directRelations;
             foreach (DirectPawnRelation relations in relationList)
             {
@@ -136,10 +139,17 @@ namespace Bernael_Xenotype
                     {
                         memories.RemoveMemoriesOfDefWhereOtherPawnIs(thoughtDef, victim);
                     }
-                    victim.relations.directRelations.Remove(relations);
+                    relationsToRemove.Add(relations);
                 }
             }
+            foreach (DirectPawnRelation item in relationsToRemove)
+            {
+                victim.relations.directRelations.Remove(item);
+            }
+
+            BabyBondUtility.EstablishBond(drainer, victim);
             victim.relations.AddDirectRelation(PawnRelationDefOf.Parent, drainer);
+            return true;
         }
 
         public static IEnumerable<Gizmo> GetResourceDrainGizmos(IGeneResourceDrain drain)
